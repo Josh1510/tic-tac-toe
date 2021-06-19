@@ -1,23 +1,23 @@
 body {
-  margin: 0px;
+    margin: 0px;
 }
 
-.gameBoard {
-  border-width: 2px;
-  border-color: black;
-  width: 300px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+#gameBoard {
+    border-width: 2px;
+    border-color: black;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .boardPos {
-  /* width: 100px;
+    /* width: 100px;
   height: 100px; */
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
 }
 
 /* .gameBoard > div {
