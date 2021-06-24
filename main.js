@@ -111,7 +111,7 @@ const gameController = (() => {
     };
 
     const checkWinner = () => {
-        // Following suggestion to determine winner based on https://codereview.stackexchange.com/questions/123279/tictactoe-win-checkin
+        // Modified from a suggestion to determine winner based on https://codereview.stackexchange.com/questions/123279/tictactoe-win-checkin
         const winningCombo = [
             // Horizontals
             [0, 1, 2],
@@ -134,12 +134,12 @@ const gameController = (() => {
                 tempArr.push(gameBoard.getBoardPos(winningCombo[i][j]));
             }
 
-            // this could be a bit cleaner - come back to me please
-            tempArr.includes('')
-                ? console.log(`no win`)
-                : allEqual(tempArr)
-                ? declareWin(tempArr)
-                : console.log('no winner');
+            // checks to see if the temp array contains any blank cells, if it doesn't then checks to see if any win conditions are met
+            if (!tempArr.includes('')) {
+                if (allEqual(tempArr)) {
+                    declareWin(tempArr);
+                }
+            }
         }
     };
 
