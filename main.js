@@ -38,9 +38,10 @@ const displayController = (() => {
 
     gameBoardSelector.addEventListener('click', (event) => {
         // removes the event listener to stop and more entrys if the game is over.
+
         if (gameController.getGameStatus()) {
             gameBoardSelector.removeEventListener;
-        } else if (event.target.textContent === '') {
+        } else if (event.target.textContent != 'X' || 'O') {
             // Play round
             gameController.playRound(event.target.id);
             drawGameBoard();
@@ -50,7 +51,9 @@ const displayController = (() => {
     //draws the symbol of the player onto the board
     const drawGameBoard = () => {
         for (let i = 0; i < gameBoard.getBoard().length; i++) {
-            gameBoardSelector.children[i].textContent =
+            gameBoardSelector.children[
+                i
+            ].firstElementChild.firstElementChild.textContent =
                 gameBoard.getBoardPos(i);
         }
     };

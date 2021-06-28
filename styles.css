@@ -31,8 +31,12 @@ main {
     border-style: solid;
     border-width: 1px;
 
-    font-size: 40px;
-    font-size: calc(40px + 10vw);
+    /* font-size: 40px; */
+    /* font-size: min(20vw, 10vw);
 
-    text-align: center;
+  text-align: center; */
+}
+
+svg {
+    width: 100%;
 }
