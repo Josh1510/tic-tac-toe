@@ -1,42 +1,76 @@
 body {
-    margin: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-    width: 100%;
-    height: 100%;
-    background-color: aqua;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+#title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+}
+
+#information {
+  min-width: 300px;
+  width: 50vw;
+  height: 100px;
+  max-width: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #gameBoard {
-    border-width: 2px;
-    border-color: black;
-    min-width: 300px;
-    min-height: 300px;
-    width: 50vw;
-    height: 50vw;
-    max-width: 60vh;
-    max-height: 60vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  min-width: 300px;
+  min-height: 300px;
+  width: 50vw;
+  height: 50vw;
+  max-width: 60vh;
+  max-height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .boardPos {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-
-    /* font-size: 40px; */
-    /* font-size: min(20vw, 10vw);
-
-  text-align: center; */
+  border: 2px solid black;
 }
 
 svg {
-    width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#restartBtnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+#restartBtn {
+  color: black;
+  font-size: 50px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#restartBtn:hover {
+  transform: scale(1.1);
 }
